@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的第一个网页</title>
+  <style>
+    /* 全局样式 */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 导航栏 */
+    .navbar {
+      background: #ff0000;
+      padding: 15px;
+      color: white;
+    }
+
+    /* 主要内容 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* 卡片组件 */
+    .card {
+      background: #964545;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+      .card {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1>我的网站</h1>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <h2>欢迎！</h2>
+      <p>这是我的第一个响应式网页。</p>
+      <button style="background: blue; color: white; padding: 10px;">一个按钮</button>
+    </div>
+  </div>
+</body>
+</html>
