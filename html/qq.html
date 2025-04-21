@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ</title>
+    <style>
+        .pre-button{
+            display: flex;
+            justify-content: space-around;
+        }
+       .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px; 
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0099ff;
+            color: white;
+            border: none;
+            border-radius: 5px; 
+            transition: background-color 0.3s ease;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="pre-button">
+        <button onclick="jumpToQQProfile('3172897157')">刘祥</button>
+        <button onclick="jumpToQQProfile('1490910338')">邢国富</button>
+    </div>
+    <div class="button-container">
+        <button  onclick="jumpToQQProfile('1261360334')">白铃潇</button>
+        <button onclick="jumpToQQProfile('2129796185')">冯兴同</button>
+        <button onclick="jumpToQQProfile('305854947')">刘继昌</button>
+        <button onclick="jumpToQQProfile('2574531644')">刘宁</button>
+        <button onclick="jumpToQQProfile('2147950482')">杨灿灿</button>
+        <button onclick="jumpToQQProfile('3466232136')">周尚毅</button>
+        <button onclick="jumpToQQProfile('3207592236')">张祥</button>
+    </div>
+
+    <script>
+        function jumpToQQProfile(qqNumber) {
+            let url = `mqqapi://card/show_pslcard?src_type=internal&version=1&uin=${qqNumber}`;
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
+
