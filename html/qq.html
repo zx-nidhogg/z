@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ</title>
+    <style>
+        .pre-button{
+            display: flex;
+            justify-content: space-around;
+        }
+       .button-container {
+            display: flex;
+            flex-direction: column; /* 按钮垂直排列 */
+            gap: 30px; /* 按钮之间的间距 */
+            align-items: center; /* 按钮在水平方向上居中对齐 */
+            margin-top: 50px; /* 容器与页面顶部的间距 */
+        }
+
+        /* 按钮样式 */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0099ff; /* 按钮背景颜色 */
+            color: white; /* 按钮文字颜色 */
+            border: none;
+            border-radius: 5px; /* 按钮圆角 */
+            transition: background-color 0.3s ease; /* 背景颜色过渡效果 */
+        }
+
+        button:hover {
+            background-color: #0077cc; /* 鼠标悬停时的背景颜色 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pre-button">
+        <button onclick="jumpToQQProfile('3172897157')">刘祥</button>
+        <button onclick="jumpToQQProfile('1490910338')">邢国富</button>
+    </div>
+    <div class="button-container">
+        <button  onclick="jumpToQQProfile('1261360334')">白铃潇</button>
+        <button onclick="jumpToQQProfile('2129796185')">冯兴同</button>
+        <button onclick="jumpToQQProfile('305854947')">刘继昌</button>
+        <button onclick="jumpToQQProfile('2574531644')">刘宁</button>
+        <button onclick="jumpToQQProfile('2147950482')">杨灿灿</button>
+        <button onclick="jumpToQQProfile('3466232136')">周尚毅</button>
+        <button onclick="jumpToQQProfile('3207592236')">张祥</button>
+    </div>
+
+    <script>
+        function jumpToQQProfile(qqNumber) {
+            let url = `mqqapi://card/show_pslcard?src_type=internal&version=1&uin=${qqNumber}`;
+            window.location.href = url;
+
+            // 备用方案，如果上面的链接无法唤起
+            setTimeout(function () {
+                var fallbackUrl = `tencent://Profile/?uin=${qqNumber}`;
+                window.location.href = fallbackUrl;
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
+
